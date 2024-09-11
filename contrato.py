@@ -9,13 +9,18 @@ class ProdutoEnum(str, Enum):
     produto3 = 'ZapFlow com Llama3.0'
 
 class Vendas(BaseModel):
+    """
+    Modelo de dados para as vendas.
+
+    Args:
+        email (EmailStr): email do vendedor
+        data (datetime): data da venda
+        valor (PositiveFloat): valor da venda
+        quantidade (PositiveInt): quantidade de produtos
+        produto (ProdutoEnum): categoria do produto
+    """
     email: EmailStr
     data: datetime
     valor: PositiveFloat
     quantidade: PositiveInt
     produto: ProdutoEnum
-
-
-# @validate_call('produto')
-# def categoria_deve_estar_no_enum(cls, v):
-#     return v
