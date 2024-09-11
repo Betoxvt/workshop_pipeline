@@ -14,3 +14,10 @@ CREATE TABLE IF NOT EXISTS vendas (
 			produto VARCHAR(50) NOT NULL
 )
 ```
+
+## Streamlit Deploy
+
+1. push all to github (check repository name & branch on streamlit)
+2. select main file
+3. creat an URL
+4. Click advanced settings and add the same .env variables with ""
