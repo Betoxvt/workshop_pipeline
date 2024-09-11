@@ -6,9 +6,9 @@ from pydantic import ValidationError
 
 def main():
     st.title('Sistema de CRM e Vendas da ZapFlow - Frontend Simples')
-    email = st.text_input('Campo de texto para inserção do email do vendedor')
-    data = st.date_input('Data da compra', datetime.now())
-    hora = st.time_input('Hora da compra', value=time(9,0))
+    email = st.text_input('Email do vendedor')
+    data = st.date_input('Data da venda', datetime.now())
+    hora = st.time_input('Hora da venda', value=time(9,0))
     valor = st.number_input('Valor da venda', min_value=0.0, format='%.2f')
     quantidade = st.number_input('Quantidade de produtos')
     produto = st.selectbox('Produto', options=['ZapFlow com Gemini', 'ZapFlow com ChatGPT', 'ZapFlow com Llama3.0'])
