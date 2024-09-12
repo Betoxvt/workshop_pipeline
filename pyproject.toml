@@ -16,6 +16,8 @@ mkdocs-material = "^9.5.34"
 mkdocstrings = "^0.26.1"
 mkdocstrings-python = "^1.11.1"
 python-dotenv = "^1.0.1"
+briefer = "^0.0.12"
+dbt-postgres = "^1.8.2"
 
 
 [build-system]
