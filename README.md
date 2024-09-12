@@ -37,7 +37,9 @@ mkdocs gh-deploy  # Push documentation to a GitHub new branch "gh-pages"
 
 ### briefer
 
-Needs docker
+Needs docker `$ systemctl start docker`
+
+On project `$ briefer`
 
 ### dbt
 
