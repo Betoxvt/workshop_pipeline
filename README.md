@@ -99,3 +99,19 @@ Now edit rules in AWS EC2 > Security Groups (like a firewall) to allow access (I
 `dbt seed` Inserts .csv to AWS DataBase
 
 now you can open at briefer using the new host from aws. `dbt run` again to access gold and all.
+
+## Dia 03
+
+### Artificial Inteligence
+
+Groq API (Llama3.0)
+groq
+
+### Vector DataBase
+
+Chroma
+chromadb
+
+### Treinar o vector database
+
+Usa um assistente / agente
