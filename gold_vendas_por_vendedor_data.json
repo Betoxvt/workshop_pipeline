@@ -1,0 +1,26 @@
+[
+    {
+        "vendedor": "chico@gmail.com",
+        "total_valor": 81600.0,
+        "total_quantidade": 19,
+        "total_vendas": 19
+    },
+    {
+        "vendedor": "german@gmail.com",
+        "total_valor": 5000.0,
+        "total_quantidade": 1,
+        "total_vendas": 1
+    },
+    {
+        "vendedor": "jorge@gmail.com",
+        "total_valor": 3205.0,
+        "total_quantidade": 3,
+        "total_vendas": 1
+    },
+    {
+        "vendedor": "maria@gmail.com",
+        "total_valor": 123700.0,
+        "total_quantidade": 27,
+        "total_vendas": 27
+    }
+]
