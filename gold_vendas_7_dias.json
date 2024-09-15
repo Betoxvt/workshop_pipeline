@@ -1,0 +1,79 @@
+[
+    {
+        "data": "2024-09-09",
+        "produto": "ZapFlow com ChatGPT",
+        "total_valor": 4800.0,
+        "total_quantidade": 1,
+        "total_vendas": 1
+    },
+    {
+        "data": "2024-09-09",
+        "produto": "ZapFlow com Gemini",
+        "total_valor": 32000.0,
+        "total_quantidade": 6,
+        "total_vendas": 6
+    },
+    {
+        "data": "2024-09-09",
+        "produto": "ZapFlow com Llama3.0",
+        "total_valor": 17300.0,
+        "total_quantidade": 4,
+        "total_vendas": 4
+    },
+    {
+        "data": "2024-09-10",
+        "produto": "ZapFlow com ChatGPT",
+        "total_valor": 28900.0,
+        "total_quantidade": 6,
+        "total_vendas": 6
+    },
+    {
+        "data": "2024-09-10",
+        "produto": "ZapFlow com Gemini",
+        "total_valor": 9000.0,
+        "total_quantidade": 2,
+        "total_vendas": 2
+    },
+    {
+        "data": "2024-09-10",
+        "produto": "ZapFlow com Llama3.0",
+        "total_valor": 4200.0,
+        "total_quantidade": 1,
+        "total_vendas": 1
+    },
+    {
+        "data": "2024-09-11",
+        "produto": "ZapFlow com Gemini",
+        "total_valor": 19805.0,
+        "total_quantidade": 7,
+        "total_vendas": 5
+    },
+    {
+        "data": "2024-09-11",
+        "produto": "ZapFlow com Llama3.0",
+        "total_valor": 4200.0,
+        "total_quantidade": 1,
+        "total_vendas": 1
+    },
+    {
+        "data": "2024-09-12",
+        "produto": "ZapFlow com ChatGPT",
+        "total_valor": 19000.0,
+        "total_quantidade": 4,
+        "total_vendas": 4
+    },
+    {
+        "data": "2024-09-12",
+        "produto": "ZapFlow com Gemini",
+        "total_valor": 17800.0,
+        "total_quantidade": 5,
+        "total_vendas": 5
+    },
+    {
+        "data": "2024-09-12",
+        "produto": "ZapFlow com Llama3.0",
+        "total_valor": 8200.0,
+        "total_quantidade": 2,
+        "total_vendas": 2
+    }
+]

@@ -21,6 +21,19 @@ def conectar_db():
     return conn
 
 
+# Function to load data from gold_vendas_7_dias
+def carregar_dados_gold_vendas_7_dias():
+    conn = conectar_db()
+    query = "SELECT * FROM gold_vendas_7_dias;"
+    with conn.cursor() as cursor:
+        cursor.execute(query)
+        dados = cursor.fetchall()
+        colunas = [desc[0] for desc in cursor.description]
+    dados_dict = [dict(zip(colunas, row)) for row in dados]
+    conn.close()
+    return dados_dict
+
+
 # Function to load data from gold_vendas_por_produto
 def carregar_dados_gold_vendas_por_produto():
     conn = conectar_db()
@@ -77,14 +90,20 @@ def salvar_em_json(dados, file_path):
 
 # Main execution: read data and save into JSON files
 if __name__ == "__main__":
+    dados_vendas_7_dias = carregar_dados_gold_vendas_7_dias()
+    salvar_em_json(dados_vendas_7_dias, "gold_vendas_7_dias.json")
+
+    dados_gold_vendas_por_produto = carregar_dados_gold_vendas_por_produto()
+    salvar_em_json(dados_gold_vendas_por_produto, "gold_vendas_por_produto.json")
+    
     dados_vendas_por_vendedor = carregar_dados_gold_vendas_por_vendedor()
     salvar_em_json(dados_vendas_por_vendedor, "gold_vendas_por_vendedor.json")
 
     dados_vendas_por_vendedor_data = carregar_dados_gold_vendas_por_vendedor_data()
-    salvar_em_json(dados_vendas_por_vendedor, "gold_vendas_por_vendedor_data.json")
+    salvar_em_json(dados_vendas_por_vendedor_data, "gold_vendas_por_vendedor_data.json")
     
-    dados_gold_vendas_por_produto = carregar_dados_gold_vendas_por_produto()
-    salvar_em_json(dados_gold_vendas_por_produto, "gold_vendas_por_produto.json")
-    
-    print("Dados salvos em 'gold_vendas_por_vendedor.json', 'gold_vendas_por_vendedor_data.json' e 'gold_vendas_por_produto.json'.")
+    print(
+        "Dados salvos em 'gold_vendas_7_dias.json', 'gold_vendas_por_produto.json', "
+        "'gold_vendas_por_vendedor.json' e 'gold_vendas_por_vendedor_data.json'."
+    )
     

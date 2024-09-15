@@ -1,20 +1,20 @@
 [
     {
         "produto": "ZapFlow com ChatGPT",
-        "total_valor": 74300.0,
-        "total_quantidade": 16,
-        "total_vendas": 16
+        "total_valor": 52700.0,
+        "total_quantidade": 11,
+        "total_vendas": 11
     },
     {
         "produto": "ZapFlow com Gemini",
-        "total_valor": 99105.0,
-        "total_quantidade": 24,
-        "total_vendas": 22
+        "total_valor": 78605.0,
+        "total_quantidade": 20,
+        "total_vendas": 18
     },
     {
         "produto": "ZapFlow com Llama3.0",
-        "total_valor": 40100.0,
-        "total_quantidade": 10,
-        "total_vendas": 10
+        "total_valor": 33900.0,
+        "total_quantidade": 8,
+        "total_vendas": 8
     }
 ]
