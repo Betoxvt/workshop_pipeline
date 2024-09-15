@@ -11,9 +11,9 @@ load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-# Função para ler o CSV
+# Função para ler o json
 def carregar_dados():
-    return pl.read_csv('vendas_7_dias.csv')
+    return pl.read_json('gold_vendas_7_dias.json')
 
 
 # Função para gerar resposta do Groq com base no agente selecionado
@@ -24,14 +24,14 @@ def responder_pergunta(pergunta, dados, agente_tipo):
     if agente_tipo == 'Robô Comercial para Dados':
         contexto = (
             f'Hoje é {data_atual}. Você é um robô comercial especializado em análise de dados de vendas.'
-            f'Os dados de vendas dos últimos 7 dias são: {dados.to_string(index=False)}.'
+            f'Os dados de vendas dos últimos 7 dias são: {dados.to_dicts()}.'
             f'Sua função é responder perguntas sobre esses dados de forma direta e objetiva, sem especulações.'
             f'Nunca responda algo que não esteja nos dados ou fora do contexto fornecido.'
         )
     elif agente_tipo == "Análise Comercial Avançada":
         contexto = (
             f"Hoje é {data_atual}. Você é um analista comercial avançado especializado em estratégias de vendas. "
-            f"Os dados de vendas dos últimos 7 dias são: {dados.to_string(index=False)}. "
+            f"Os dados de vendas dos últimos 7 dias são: {dados.to_dicts()}. "
             f"Sua função é sugerir estratégias de vendas baseadas nos dados, respondendo perguntas e oferecendo insights. "
             f"Nunca responda algo que não tenha nos dados ou seja fora do contexto fornecido."
         )
