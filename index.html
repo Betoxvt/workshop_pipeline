@@ -486,16 +486,7 @@
 
             <details class="quote">
               <summary>Source code in <code>database.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
 <span class="normal">30</span>
@@ -515,17 +506,16 @@
 <span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">salvar_no_postgres</span><span class="p">(</span><span class="n">dados</span><span class="p">:</span> <span class="n">Vendas</span><span class="p">):</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">salvar_no_postgres</span><span class="p">(</span><span class="n">dados</span><span class="p">:</span> <span class="n">Vendas</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Função para salvar a venda no PostgreSQL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-            <span class="n">host</span><span class="o">=</span><span class="n">DB_HOST</span><span class="p">,</span>
-            <span class="n">database</span><span class="o">=</span><span class="n">DB_NAME</span><span class="p">,</span>
-            <span class="n">user</span><span class="o">=</span><span class="n">DB_USER</span><span class="p">,</span>
-            <span class="n">password</span><span class="o">=</span><span class="n">DB_PASS</span>
-        <span class="p">)</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">connect_postgres</span><span class="p">()</span>
         <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
         <span class="c1"># Inserção dos dados na tabela de vendas</span>
